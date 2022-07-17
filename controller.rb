@@ -21,7 +21,7 @@ class Controller
     # 3. Create an instance of that recipe, ie the model
     recipe = Recipe.new(name, description)
     # 4. Send the recipe to be stored in the cookbook database
-    cookbook.add(recipe)
+    @cookbook.add(recipe)
     #5. Display the recipes
     display_recipes
   end
@@ -32,7 +32,7 @@ class Controller
     #2. Ask the user for the index of the recipe to remove
     index = @view.ask_user_for_index
     #3. Remoce the recipe from the cookbook database
-    cookbook.destroy(index)
+    @cookbook.destroy(index)
     # 4. display the recipes again
     display_recipes
   end
