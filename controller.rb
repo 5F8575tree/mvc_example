@@ -39,7 +39,7 @@ class Controller
 
   def display_recipes
     # 1. Grab the recipes from the database
-    recipes = cookbook.all
+    recipes = @cookbook.all
     # 2. Display the recipes in the view
     @view.display(recipes)
   end
